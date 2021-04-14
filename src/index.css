@@ -11,3 +11,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.card-style{
+    width: 18rem;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto ;
+    align-items: center;
+}
+
+.img-style{
+    height: 365px;
+}
