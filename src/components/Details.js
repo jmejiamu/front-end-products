@@ -36,8 +36,9 @@ const Details = (props) => {
 
     useEffect(() => {
         getASingleProject();
-    }, [])
+    }, []);
 
+    // Render Single Data
     const renderData = () => {
         return (
             aproduct.map((items, index) => {
@@ -49,7 +50,6 @@ const Details = (props) => {
                             <p className="card-text">{items.description_item}</p>
                             <p>$ {items.price}</p>
                             <button type="button" class="btn btn-danger" onClick={() => updateLikes()}>Likes {items.likes} </button>
-                            {/* <Details id={items.item_id} /> */}
                         </div>
 
                     </div>

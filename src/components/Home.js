@@ -2,10 +2,15 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Details from "./Details";
 import NavBar from "./NavBar/NavBar";
+import Pagination from "./Pagination/Pagination";
 
 
 const Home = (props) => {
     const [products, setProducts] = useState([]);
+
+    // Pagination
+    const [currentPage, setCurrentPage] = useState(1);
+    const [imgPerPage] = useState(6);
 
     const getProducts = async () => {
         try {
@@ -21,13 +26,21 @@ const Home = (props) => {
         getProducts();
     }, [])
 
+    // PAGINATION
+    // Get the current img 
+    const indexOfLastImg = currentPage * imgPerPage;
+    const indexOfFirstImg = indexOfLastImg - imgPerPage;
+    const currentImg = products.slice(indexOfFirstImg, indexOfLastImg);
+
+    // Change Page
+    const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
 
     const renderData = () => {
         if (products.length === 0) return <p>Loding...</p>
         return (
 
-            products.map((items, index) => {
+            currentImg.map((items, index) => {
                 return (
                     <div key={index} className="card card-style mt-5 grid-item mb-5" >
                         <img className="card-img-top img-style" src={items.product_img} alt="product-pic" />
@@ -51,6 +64,7 @@ const Home = (props) => {
                     {
                         renderData()
                     }
+                    <Pagination imgPerPage={imgPerPage} totalImg={products.length} paginate={paginate} />
                 </div>
             </div>
         </>
