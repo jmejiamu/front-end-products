@@ -40,6 +40,7 @@ const Details = (props) => {
 
     // Render Single Data
     const renderData = () => {
+        if (aproduct.length === 0) return <p>Loding...</p>
         return (
             aproduct.map((items, index) => {
                 return (
