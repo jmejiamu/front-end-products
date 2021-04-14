@@ -10,7 +10,7 @@ const Home = (props) => {
 
     // Pagination
     const [currentPage, setCurrentPage] = useState(1);
-    const [imgPerPage] = useState(6);
+    const [imgPerPage] = useState(5);
 
     const getProducts = async () => {
         try {
@@ -64,8 +64,8 @@ const Home = (props) => {
                     {
                         renderData()
                     }
-                    <Pagination imgPerPage={imgPerPage} totalImg={products.length} paginate={paginate} />
                 </div>
+                <Pagination imgPerPage={imgPerPage} totalImg={products.length} paginate={paginate} />
             </div>
         </>
     );
