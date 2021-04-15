@@ -50,7 +50,7 @@ const Details = (props) => {
                             <h5 className="card-title">{items.title}</h5>
                             <p className="card-text">{items.description_item}</p>
                             <p>$ {items.price}</p>
-                            <button type="button" class="btn btn-danger" onClick={() => updateLikes()}>Likes {items.likes} </button>
+                            <button type="button" className="btn btn-danger btn-block" onClick={() => updateLikes()}>Likes {items.likes} </button>
                         </div>
 
                     </div>

@@ -47,7 +47,7 @@ const Home = (props) => {
                         <div className="card-body">
                             <h5 className="card-title">{items.title}</h5>
                             <p>$ {items.price}</p>
-                            <button type="button" className="btn btn-danger" onClick={() => props.setId(items.item_id)}> <Link to="/detail">Details</Link></button>
+                            <Link to="/detail"><button type="button" className="btn btn-danger btn-block" onClick={() => props.setId(items.item_id)}> Details</button></Link>
                         </div>
 
                     </div>
