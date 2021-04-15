@@ -10,3 +10,8 @@
 * React
 * Bootstrap
 * CSS
+
+### Instruction
+* clone repo 
+* cd to /front-end-products
+* npm install
