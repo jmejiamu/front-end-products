@@ -13,6 +13,7 @@ code {
 }
 .card-style{
     width: 18rem;
+    
 }
 .grid-container{
     display: grid;
@@ -22,4 +23,8 @@ code {
 
 .img-style{
     height: 365px;
+}
+.center-single{
+  display: flex;
+  align-items: center;
 }

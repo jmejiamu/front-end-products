@@ -38,7 +38,7 @@ const Details = (props) => {
         getASingleProject();
     }, []);
 
-    // Render Single Data
+    // Render Single Data items
     const renderData = () => {
         if (aproduct.length === 0) return <p>Loding...</p>
         return (
@@ -50,7 +50,7 @@ const Details = (props) => {
                             <h5 className="card-title">{items.title}</h5>
                             <p className="card-text">{items.description_item}</p>
                             <p>$ {items.price}</p>
-                            <button type="button" className="btn btn-danger btn-block" onClick={() => updateLikes()}>Likes {items.likes} </button>
+                            <button type="button" className="btn btn-danger btn-block" onClick={() => updateLikes()}> 😊Likes {items.likes} </button>
                         </div>
 
                     </div>
@@ -62,11 +62,13 @@ const Details = (props) => {
         <>
             <NavBar />
             <div className="container">
+                <div className="center-single justify-content-center">
 
-                <div className="grid-container">
-                    {
-                        renderData()
-                    }
+                    <div className="grid-container">
+                        {
+                            renderData()
+                        }
+                    </div>
                 </div>
             </div>
         </>
