@@ -7,7 +7,8 @@
 ![details](https://user-images.githubusercontent.com/27458911/114804949-0108c680-9d57-11eb-8a35-1816902a5fc5.png)
 
 ### Front end
-* React
+* Reactjs
+* React Router
 * Bootstrap
 * CSS
 
