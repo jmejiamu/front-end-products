@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Details from "./Details";
 import NavBar from "./NavBar/NavBar";
 import Pagination from "./Pagination/Pagination";
+import restfulapi from "./url/url";
 
 
 const Home = (props) => {
@@ -14,7 +15,7 @@ const Home = (props) => {
 
     const getProducts = async () => {
         try {
-            const respose = await fetch('http://localhost:3001/products');
+            const respose = await fetch(restfulapi.localurl + '/products');
             const data = await respose.json();
             setProducts(data)
         } catch (error) {

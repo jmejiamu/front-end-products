@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import NavBar from './NavBar/NavBar';
+import restfulapi from './url/url';
 
 const Details = (props) => {
     const [aproduct, setAProduct] = useState([]);
@@ -18,7 +19,7 @@ const Details = (props) => {
     const updateLikes = async () => {
         try {
 
-            const response = await fetch(`http://localhost:3001/updatelikes/${props.id}`, {
+            const response = await fetch(restfulapi.localurl + `/updatelikes/${props.id}`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
             })
